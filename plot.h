@@ -2,26 +2,33 @@
 #define PLOT_H
 
 #include <QWidget>
-#include <qwt-qt4/qwt_plot.h>
 
 namespace Ui {
     class plot;
 }
+//Создаем виджет позволяющий на себе рисовать при помощи Qpainter
+//class QPaintEvent;
 
 class plot : public QWidget
 {
     Q_OBJECT
+
 
 public:
     explicit plot(QWidget *parent = 0);
     ~plot();
 
 
+//protected:
+  //  void paintEvent(QPaintEvent *);
+
 private:
     Ui::plot *ui;
 
+
 public slots:
-void prevv();
+ // слоты  переходов форм
+    void prevv();
 
 };
 

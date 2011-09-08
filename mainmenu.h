@@ -3,6 +3,9 @@
 
 #include <QDialog>
 
+#include <plot.h>
+
+
 namespace Ui {
     class MainMenu;
 }
@@ -18,7 +21,10 @@ public:
 private:
     Ui::MainMenu *ui;
 
+
+
 public slots:
+ // слоты  переходов форм
 void next();
 void next2();
 

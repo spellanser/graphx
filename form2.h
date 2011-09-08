@@ -18,7 +18,9 @@ public:
 private:
     Ui::Form2 *ui;
 public slots:
+ // слоты  переходов форм
 void prev();
+void plott();
 
 };
 

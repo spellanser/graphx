@@ -2,11 +2,12 @@
 #include "ui_mainmenu.h"
 #include <form2.h>
 #include <plot.h>
-MainMenu::MainMenu(QWidget *parent) :
-    QDialog(parent),
+MainMenu::MainMenu(QWidget *parent) : QDialog(parent),
     ui(new Ui::MainMenu)
 {
     ui->setupUi(this);
+
+    //сигналы переходов форм
     connect(ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(next()));
     connect (ui->pushButton_2,SIGNAL(clicked(bool)),this,SLOT(next2()));
 }
