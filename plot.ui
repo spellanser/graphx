@@ -11,19 +11,32 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>График функции</string>
+   <string>GraphX -  График функции</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>520</x>
+     <x>470</x>
      <y>460</y>
      <width>121</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>Назад</string>
+    <string>На главную</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>460</y>
+     <width>151</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Изменить функцию</string>
    </property>
   </widget>
  </widget>

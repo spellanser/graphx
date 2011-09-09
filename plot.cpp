@@ -1,6 +1,9 @@
 #include "plot.h"
 #include "ui_plot.h"
+
 #include <mainmenu.h>
+#include <form2.h>
+
 
 #include <QPainter>
 
@@ -15,6 +18,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
     //сигналы переходов форм
     connect (ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(prevv()));
+    connect (ui->pushButton_2,SIGNAL(clicked(bool)),this,SLOT(vvod()));
 
 
 
@@ -50,3 +54,12 @@ x->show();
 close();
 
 }
+void plot::vvod()
+{
+
+Form2 *x = new Form2;
+x->show();
+close();
+
+}
+

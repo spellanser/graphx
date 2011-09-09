@@ -29,6 +29,8 @@ private:
 public slots:
  // слоты  переходов форм
     void prevv();
+    void vvod();
+
 
 };
 
