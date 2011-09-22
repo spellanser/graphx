@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
-    <normaloff>:/Res/res/Eclipse.jpg</normaloff>:/Res/res/Eclipse.jpg</iconset>
+    <normaloff>:/Res/res/logo-steam.jpg</normaloff>:/Res/res/logo-steam.jpg</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -133,7 +133,7 @@ p, li { white-space: pre-wrap; }
    <item row="3" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>История</string>
+      <string>Введенные функции</string>
      </property>
     </widget>
    </item>

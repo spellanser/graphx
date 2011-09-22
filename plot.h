@@ -2,6 +2,13 @@
 #define PLOT_H
 
 #include <QWidget>
+#include <qwt_plot_canvas.h>
+#include <qwt_legend.h>
+#include <qwt_plot_grid.h>
+#include <qwt_plot_curve.h>
+#include <qwt_symbol.h>
+#include <qwt_plot_zoomer.h>
+
 
 namespace Ui {
     class plot;
@@ -18,9 +25,13 @@ public:
     explicit plot(QWidget *parent = 0);
     ~plot();
 
+protected:
+  QwtLegend *leg;
+  QwtPlotGrid *grid;
+  QwtPlotCurve *curv1,*curv2;
+    QwtSymbol *symbol1;
+    QwtPlotZoomer *zoom;
 
-//protected:
-  //  void paintEvent(QPaintEvent *);
 
 private:
     Ui::plot *ui;
@@ -30,6 +41,8 @@ public slots:
  // слоты  переходов форм
     void prevv();
     void vvod();
+
+
 
 
 };

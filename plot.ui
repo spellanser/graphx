@@ -6,18 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>815</width>
-    <height>509</height>
+    <width>886</width>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>GraphX -  График функции</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/Res/res/12770073.png</normaloff>:/Res/res/12770073.png</iconset>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>460</y>
+     <x>560</x>
+     <y>480</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -29,8 +33,8 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>460</y>
+     <x>720</x>
+     <y>480</y>
      <width>151</width>
      <height>27</height>
     </rect>
@@ -39,7 +43,26 @@
     <string>Изменить функцию</string>
    </property>
   </widget>
+  <widget class="QwtPlot" name="qwtPlot">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>841</width>
+     <height>451</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <customwidgets>
+  <customwidget>
+   <class>QwtPlot</class>
+   <extends>QFrame</extends>
+   <header>qwt_plot.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
  <connections/>
 </ui>

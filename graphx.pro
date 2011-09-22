@@ -8,7 +8,8 @@ QT       += core gui
 
 TARGET = graphx
 TEMPLATE = app
-
+INCLUDEPATH += /home/sarkis/qwt-6.0.1/src
+qtAddLibrary(qwt)
 
 SOURCES += main.cpp\
         mainmenu.cpp \
