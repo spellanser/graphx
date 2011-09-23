@@ -41,10 +41,21 @@ public slots:
  // слоты  переходов форм
     void prevv();
     void vvod();
-
+    void plot1();
 
 
 
 };
 
 #endif // PLOT_H
+
+
+
+
+
+
+
+
+
+
+
