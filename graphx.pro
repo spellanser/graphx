@@ -13,21 +13,16 @@ qtAddLibrary(qwt)
 
 SOURCES += main.cpp\
         mainmenu.cpp \
-    form2.cpp \
     plot.cpp \
-    history.cpp \
     help.cpp \
     functionhelp.cpp
 
 HEADERS  += mainmenu.h \
-    form2.h \
     plot.h \
-    history.h \
     help.h \
     functionhelp.h
 
 FORMS    += mainmenu.ui \
-    form2.ui \
     plot.ui \
     history.ui \
     help.ui \

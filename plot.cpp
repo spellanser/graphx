@@ -2,10 +2,9 @@
 #include "ui_plot.h"
 
 #include <mainmenu.h>
-#include <form2.h>
+#include <functionhelp.h>
 
 
-#include <QPainter>
 #include "text_analiz.cpp"
 #include "postfix_result_and_stroka_postfix.cpp"
 
@@ -85,12 +84,15 @@ plot::plot(QWidget *parent) : QWidget(parent),
         // вычисляем точки кривой
        // задаем шаг
         int i = 0;
-        for (double k = -1000.0; k <= 1000.0; k = k + 0.01)
+        double k = str11;
+
+        for ( k ; k <= str22; k = k + 0.001)
         {
           X1[i] = k;
           Y1[i] = polka(vixod(input1),X1[i],0);
           i++;
         }
+
 
 
 
@@ -120,7 +122,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
         //сигналы переходов форм
         connect (ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(plot1()));
-        connect (ui->pushButton_2,SIGNAL(clicked(bool)),this,SLOT(vvod()));
+        connect (ui->pushButton_2,SIGNAL(clicked(bool)),this,SLOT(erase()));
         connect (ui->lineEdit,SIGNAL(returnPressed()),this,SLOT(plot1()));
         connect (ui->lineEdit_2,SIGNAL(editingFinished()),this,SLOT(plot1()));
         connect (ui->lineEdit_3,SIGNAL(editingFinished()),this,SLOT(plot1()));
@@ -204,7 +206,9 @@ void plot::plot1()
         // вычисляем точки кривой
        // задаем шаг
         int i = 0;
-        for (double k = -1000.0; k <= 1000.0; k = k + 0.01)
+        double k = str11;
+
+        for ( k ; k <= str22; k = k + 0.001)
         {
           X1[i] = k;
           Y1[i] = polka(vixod(input1),X1[i],0);
@@ -245,7 +249,7 @@ plot::~plot()
     delete zoom;
 }
 
-void plot::prevv()
+void plot::main()
 {
 
 MainMenu *x = new MainMenu;
@@ -253,12 +257,19 @@ x->show();
 close();
 
 }
-void plot::vvod()
-{
 
-Form2 *x = new Form2;
-x->show();
-close();
+void plot::erase()
+{
+    delete curv1;
+    delete curv2;
+
+
+}
+void plot::instruct()
+{
+    functionhelp *x = new functionhelp;
+    x->show();
+    hide();
 
 }
 

@@ -39,9 +39,10 @@ private:
 
 public slots:
  // слоты  переходов форм
-    void prevv();
-    void vvod();
+    void erase();
+    void instruct();
     void plot1();
+void main();
 
 
 
