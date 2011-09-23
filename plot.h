@@ -43,6 +43,7 @@ public slots:
     void instruct();
     void plot1();
 void main();
+void eraseall();
 
 
 

@@ -3,10 +3,11 @@
 
 #include <mainmenu.h>
 #include <functionhelp.h>
-
-
+#include <QtGui>
+#include <locale>
 #include "text_analiz.cpp"
 #include "postfix_result_and_stroka_postfix.cpp"
+
 
 
 
@@ -14,6 +15,7 @@
 plot::plot(QWidget *parent) : QWidget(parent),
     ui(new Ui::plot)
 {
+    setlocale(0,"russian");
     ui->setupUi(this);
 
     //заголовок
@@ -40,6 +42,27 @@ plot::plot(QWidget *parent) : QWidget(parent),
     str11 = ui->lineEdit_3->text().toDouble();
     str22 = ui->lineEdit_2->text().toDouble();
 
+    char* value = new char[100];
+    QByteArray ar = str.toAscii();
+    char *sometext = ar.data();
+    value = sometext;
+    char *input1,*output1;
+    input1 = output1 = new char[100];
+    input1 = value;
+    input1 = proobraz(input1);
+    input1 = len(input1,value);
+    output1=vixod(input1);
+    if (output1 == "Error" )
+        {
+
+            QMessageBox msgBox(QMessageBox::Information,
+                ("Error!"),
+                ("Check the correctness of the function! (See the instructions for writing) "),
+                QMessageBox::Ok);
+ msgBox.exec();
+ ui->lineEdit->setFocus();
+
+}
     // устанавливаем границы осей
     ui->qwtPlot->setAxisTitle(QwtPlot::xBottom,QString::fromUtf8("Ось Х"));
     ui->qwtPlot->setAxisScale(QwtPlot::xBottom,(str1),(str2));
@@ -60,17 +83,6 @@ plot::plot(QWidget *parent) : QWidget(parent),
     symbol1->setPen(QColor(Qt::black));
     symbol1->setSize(4);
     curv1->setSymbol(symbol1);
-
-
-    char* value = new char[100];
-    QByteArray ar = str.toAscii();
-    char *sometext = ar.data();
-    value = sometext;
-    char *input1,*output1;
-    input1 = output1 = new char[100];
-    input1 = value;
-    input1 = proobraz(input1);
-    input1 = len(input1,value);
 
 
 
@@ -111,6 +123,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
     {
         curv1->attach(ui->qwtPlot);
 }
+
     //перестраиваем
     ui->qwtPlot->replot();
 
@@ -128,6 +141,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
         connect (ui->lineEdit_3,SIGNAL(editingFinished()),this,SLOT(plot1()));
         connect (ui->pushButton_5,SIGNAL(clicked(bool)),this,SLOT(main()));
         connect (ui->pushButton_3,SIGNAL(clicked(bool)),this,SLOT(instruct()) );
+        connect (ui->pushButton_6,SIGNAL(clicked(bool)),this,SLOT(eraseall()));
 
 }
 
@@ -194,7 +208,18 @@ void plot::plot1()
     input1 = value;
     input1 = proobraz(input1);
     input1 = len(input1,value);
+    output1=vixod(input1);
+    if (output1 == "Error" )
+        {
 
+            QMessageBox msgBox(QMessageBox::Information,
+                ("Error!"),
+                ("Check the correctness of the function! (See the instructions for writing) "),
+                QMessageBox::Ok);
+ msgBox.exec();
+ ui->lineEdit->setFocus();
+
+}
 
 
     //кол-во точек кривой
@@ -223,11 +248,26 @@ void plot::plot1()
     // передаем данные для построения
 
     curv1->setSamples(X1,Y1,i-1);
+
     //высвобождаем память
     free((void *)X1);
     // помещаем кривые на виджет
-    curv1->attach(ui->qwtPlot);
 
+    if (str!="")
+    {
+        curv1->attach(ui->qwtPlot);
+}
+ else
+{
+    QMessageBox msgBox(QMessageBox::Information,
+        ("Function is not implemented"),
+        ("LineEdit is empty, enter funtion  "),
+        QMessageBox::Ok);
+msgBox.exec();
+ui->lineEdit->setFocus();
+
+
+}
     //перестраиваем
     ui->qwtPlot->replot();
 
@@ -261,15 +301,25 @@ close();
 
 void plot::erase()
 {
-  curv1->hide();
-  ui->qwtPlot->replot();
+    curv1->hide();
+
+    ui->qwtPlot->replot();
 
 }
+
+void plot::eraseall()
+{
+    plot *x1 = new plot;
+    x1->show();
+    close();
+
+}
+
 void plot::instruct()
 {
     functionhelp *x = new functionhelp;
     x->show();
-    hide();
+   //hide();
 
 }
 

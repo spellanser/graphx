@@ -19,7 +19,7 @@ functionhelp::~functionhelp()
 
 void functionhelp::back()
 {
-    plot *x = new plot();
-    x->show();
+
     close();
+
 }

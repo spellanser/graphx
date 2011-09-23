@@ -108,21 +108,38 @@
    <item row="2" column="0">
     <widget class="QPushButton" name="pushButton_2">
      <property name="text">
-      <string>Очистить</string>
+      <string>Удалить последнюю фуннкцию</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="2" column="3">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>Возврат в меню</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
     <widget class="QPushButton" name="pushButton_3">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
+     </property>
      <property name="text">
       <string>Инструкция по вводу</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="2">
-    <widget class="QPushButton" name="pushButton_5">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
      <property name="text">
-      <string>Возврат в меню</string>
+      <string>Очистить</string>
      </property>
     </widget>
    </item>
