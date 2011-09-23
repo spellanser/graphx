@@ -126,7 +126,8 @@ plot::plot(QWidget *parent) : QWidget(parent),
         connect (ui->lineEdit,SIGNAL(returnPressed()),this,SLOT(plot1()));
         connect (ui->lineEdit_2,SIGNAL(editingFinished()),this,SLOT(plot1()));
         connect (ui->lineEdit_3,SIGNAL(editingFinished()),this,SLOT(plot1()));
-
+        connect (ui->pushButton_5,SIGNAL(clicked(bool)),this,SLOT(main()));
+        connect (ui->pushButton_3,SIGNAL(clicked(bool)),this,SLOT(instruct()) );
 
 }
 
@@ -260,9 +261,8 @@ close();
 
 void plot::erase()
 {
-    delete curv1;
-    delete curv2;
-
+  curv1->hide();
+  ui->qwtPlot->replot();
 
 }
 void plot::instruct()
