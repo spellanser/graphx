@@ -8,7 +8,6 @@
 #include "postfix_result_and_stroka_postfix.cpp"
 
 
-
 // ==================== Конструктор =============================
 
 plot::plot(QWidget *parent) : QWidget(parent),
@@ -51,6 +50,12 @@ plot::plot(QWidget *parent) : QWidget(parent),
     input1 = proobraz(input1);
     input1 = len(input1,value);
     output1=vixod(input1);
+// легенда
+    leg = new QwtLegend();
+        // запрещаем ее редактировать
+        leg->setItemMode(QwtLegend::ReadOnlyItem);
+        //  добавляем легенду в верхнюю часть графика
+        ui->qwtPlot->insertLegend(leg,QwtPlot::TopLegend);
 
     // устанавливаем границы осей
     ui->qwtPlot->setAxisTitle(QwtPlot::xBottom,QString::fromUtf8("Ось Х"));
@@ -61,7 +66,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
     // Задаем кривые графиков
 
-    curv1 = new QwtPlotCurve(QString("График функции"));
+    curv1 = new QwtPlotCurve(QString(str));
     curv1->setRenderHint(QwtPlotItem::RenderAntialiased);
     curv1->setPen(QPen(Qt::red));
 
@@ -182,21 +187,7 @@ void plot::plot1()
 {
     // Заголовок
     ui->qwtPlot->setTitle(QString::fromUtf8(" График введенной функции "));
-    // строим график
-
-    curv1 = new QwtPlotCurve(QString("График функции"));
-    curv1->setRenderHint(QwtPlotItem::RenderAntialiased);
-    curv1->setPen(QPen(Qt::red));
-    // обозначаем точки кривой
-
-
-    symbol1 = new QwtSymbol();
-    //symbol1->setStyle(QwtSymbol::Ellipse);
-    symbol1->setPen(QColor(Qt::black));
-    symbol1->setSize(4);
-    curv1->setSymbol(symbol1);
-
-
+    // задаем  график
 
 
     QString str;
@@ -211,6 +202,22 @@ void plot::plot1()
 
     str11 = ui->lineEdit_3->text().toDouble();
     str22 = ui->lineEdit_2->text().toDouble();
+
+    curv1 = new QwtPlotCurve(QString(str));
+    curv1->setRenderHint(QwtPlotItem::RenderAntialiased);
+    curv1->setPen(QPen(Qt::red));
+    // обозначаем точки кривой
+
+
+    symbol1 = new QwtSymbol();
+    //symbol1->setStyle(QwtSymbol::Ellipse);
+    symbol1->setPen(QColor(Qt::black));
+    symbol1->setSize(4);
+    curv1->setSymbol(symbol1);
+
+
+
+
 
 
     // Создаем сетку
@@ -242,6 +249,13 @@ void plot::plot1()
     input1 = len(input1,value);
     output1=vixod(input1);
 
+    // легенда
+
+    leg = new QwtLegend();
+        // запрещаем ее редактировать
+        leg->setItemMode(QwtLegend::ReadOnlyItem);
+        //  добавляем легенду в верхнюю часть графика
+        ui->qwtPlot->insertLegend(leg,QwtPlot::TopLegend);
 
     // обработка ошибок
 bool key1 = false;
