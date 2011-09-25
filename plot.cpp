@@ -4,19 +4,18 @@
 #include <mainmenu.h>
 #include <functionhelp.h>
 #include <QtGui>
-#include <locale>
 #include "text_analiz.cpp"
 #include "postfix_result_and_stroka_postfix.cpp"
 
 
 
-
+// ==================== Конструктор =============================
 
 plot::plot(QWidget *parent) : QWidget(parent),
     ui(new Ui::plot)
 {
-    setlocale(0,"russian");
     ui->setupUi(this);
+
 
     //заголовок
     ui->qwtPlot->setTitle(QString::fromUtf8(" График введенной функции "));
@@ -52,17 +51,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
     input1 = proobraz(input1);
     input1 = len(input1,value);
     output1=vixod(input1);
-    if (output1 == "Error" )
-        {
 
-            QMessageBox msgBox(QMessageBox::Information,
-                ("Error!"),
-                ("Check the correctness of the function! (See the instructions for writing) "),
-                QMessageBox::Ok);
- msgBox.exec();
- ui->lineEdit->setFocus();
-
-}
     // устанавливаем границы осей
     ui->qwtPlot->setAxisTitle(QwtPlot::xBottom,QString::fromUtf8("Ось Х"));
     ui->qwtPlot->setAxisScale(QwtPlot::xBottom,(str1),(str2));
@@ -84,6 +73,39 @@ plot::plot(QWidget *parent) : QWidget(parent),
     symbol1->setSize(4);
     curv1->setSymbol(symbol1);
 
+
+    // обработка ошибок
+
+
+    if (output1 == "Error" )
+        {
+
+            QMessageBox msgBox(QMessageBox::Information,
+                ("Error!"),
+                ("Check the correctness of the function! (See the instructions for writing) "),
+                QMessageBox::Ok);
+ msgBox.exec();
+  ui->lineEdit->clear();
+ ui->lineEdit->setFocus();
+
+}
+    bool key2 = false;
+    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*')
+    {
+        key2 = true;
+        QMessageBox msgBox(QMessageBox::Information,
+            ("Error!"),
+            ("Read instruction!"),
+            QMessageBox::Ok);
+    msgBox.exec();
+    ui->lineEdit->clear();
+    ui->lineEdit->setFocus();
+
+    }
+
+
+if (key2!=true)
+{
 
 
     //кол-во точек кривой
@@ -117,7 +139,9 @@ plot::plot(QWidget *parent) : QWidget(parent),
     curv1->setSamples(X1,Y1,i-1);
     //высвобождаем память
     free((void *)X1);
+}
     // помещаем кривые на виджет
+
 
     if (str!="")
     {
@@ -144,6 +168,14 @@ plot::plot(QWidget *parent) : QWidget(parent),
         connect (ui->pushButton_6,SIGNAL(clicked(bool)),this,SLOT(eraseall()));
 
 }
+
+
+
+
+// ===================== Функция построения =========================
+
+
+
 
 void plot::plot1()
 
@@ -209,26 +241,50 @@ void plot::plot1()
     input1 = proobraz(input1);
     input1 = len(input1,value);
     output1=vixod(input1);
+
+
+    // обработка ошибок
+bool key1 = false;
+
+
     if (output1 == "Error" )
         {
-
-            QMessageBox msgBox(QMessageBox::Information,
+                key1 = true;
+                QMessageBox msgBox(QMessageBox::Information,
                 ("Error!"),
                 ("Check the correctness of the function! (See the instructions for writing) "),
                 QMessageBox::Ok);
  msgBox.exec();
+ ui->lineEdit->clear();
  ui->lineEdit->setFocus();
 
 }
+    bool key2 = false;
+    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*')
+    {
+        key2 = true;
+        QMessageBox msgBox(QMessageBox::Information,
+            ("Error!"),
+            ("Read instruction!"),
+            QMessageBox::Ok);
+    msgBox.exec();
+    ui->lineEdit->clear();
+    ui->lineEdit->setFocus();
+
+    }
+
+
+if (key2!=true)
+{
 
 
     //кол-во точек кривой
         const int N1 = 25600000;
-        const int N2 = 262144;
+            const int N2 = 262144;
 
 
             double *X1 = (double *)malloc((2*N1+2*N2)*sizeof(double));
-            double *Y1 = X1 + N1;
+                double *Y1 = X1 + N1;
         // вычисляем точки кривой
        // задаем шаг
         int i = 0;
@@ -245,16 +301,20 @@ void plot::plot1()
 
 
 
+
     // передаем данные для построения
 
-    curv1->setSamples(X1,Y1,i-1);
 
+
+    curv1->setSamples(X1,Y1,i-1);
     //высвобождаем память
     free((void *)X1);
+}
     // помещаем кривые на виджет
 
-    if (str!="")
+    if (str!="" )
     {
+        if (key1==false)
         curv1->attach(ui->qwtPlot);
 }
  else
@@ -277,7 +337,7 @@ ui->lineEdit->setFocus();
    zoom->setRubberBandPen(QPen(Qt::blue));
 }
 
-
+// ========= Деструктор ===========
 
 plot::~plot()
 {
@@ -289,6 +349,7 @@ plot::~plot()
     delete symbol1;
     delete zoom;
 }
+// Обработка сигналов нажатий клавиш
 
 void plot::main()
 {

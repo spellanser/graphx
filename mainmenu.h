@@ -29,6 +29,8 @@ public slots:
 void next2();
 
 void hel();
+void abo();
+
 
 
 };

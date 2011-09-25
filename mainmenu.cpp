@@ -5,7 +5,7 @@
 #include <plot.h>
 #include <history.h>
 #include <help.h>
-
+#include <about.h>
 
 MainMenu::MainMenu(QWidget *parent) : QDialog(parent),
     ui(new Ui::MainMenu)
@@ -17,6 +17,8 @@ MainMenu::MainMenu(QWidget *parent) : QDialog(parent),
     connect (ui->pushButton_2,SIGNAL(clicked(bool)),this,SLOT(next2()));
 
     connect (ui->pushButton_4,SIGNAL(clicked(bool)),this,SLOT(hel()));
+
+    connect (ui->pushButton_6,SIGNAL(clicked(bool)),this,SLOT(abo()));
 
 }
 
@@ -31,6 +33,13 @@ void MainMenu::next2()
     y->show();
     close();
 
+
+}
+void MainMenu::abo()
+{
+    about *x = new about();
+x->show();
+close();
 
 }
 

@@ -15,18 +15,21 @@ SOURCES += main.cpp\
         mainmenu.cpp \
     plot.cpp \
     help.cpp \
-    functionhelp.cpp
+    functionhelp.cpp \
+    about.cpp
 
 HEADERS  += mainmenu.h \
     plot.h \
     help.h \
-    functionhelp.h
+    functionhelp.h \
+    about.h
 
 FORMS    += mainmenu.ui \
     plot.ui \
     history.ui \
     help.ui \
-    functionhelp.ui
+    functionhelp.ui \
+    about.ui
 
 RESOURCES += \
     res.qrc

@@ -14,17 +14,23 @@
    <enum>Qt::TabFocus</enum>
   </property>
   <property name="windowTitle">
-   <string>GraphX -  График функции</string>
+   <string>GraphX -  Ввод и построение графика</string>
   </property>
   <property name="windowIcon">
    <iconset resource="res.qrc">
     <normaloff>:/Res/res/12770073.png</normaloff>:/Res/res/12770073.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="3">
+   <item row="0" column="0" colspan="4">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Введите функцию для построения  (прочтите инструкцию по вводу функций!)</string>
        </property>
@@ -33,7 +39,30 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>y =</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="toolTip">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Введите функцию для построения &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#aa0000;&quot;&gt;ПРОЧТИТЕ ИНСТРУКЦИЮ НИЖЕ , ДЛЯ ИЗБЕЖАНИЯ ОШИБОК!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pushButton">
@@ -46,7 +75,7 @@
      </item>
     </layout>
    </item>
-   <item row="0" column="3">
+   <item row="0" column="4">
     <spacer name="horizontalSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -59,10 +88,16 @@
      </property>
     </spacer>
    </item>
-   <item row="0" column="4">
+   <item row="0" column="5">
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Границы осей (X и Y)</string>
        </property>
@@ -102,24 +137,10 @@
      </item>
     </layout>
    </item>
-   <item row="1" column="0" colspan="5">
+   <item row="1" column="0" colspan="6">
     <widget class="QwtPlot" name="qwtPlot"/>
    </item>
    <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>Удалить последнюю фуннкцию</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="3">
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="text">
-      <string>Возврат в меню</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="2">
     <widget class="QPushButton" name="pushButton_3">
      <property name="font">
       <font>
@@ -134,12 +155,26 @@
     </widget>
    </item>
    <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Удалить последнюю фуннкцию</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
     <widget class="QPushButton" name="pushButton_6">
      <property name="focusPolicy">
       <enum>Qt::TabFocus</enum>
      </property>
      <property name="text">
       <string>Очистить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3" colspan="2">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>Возврат в меню</string>
      </property>
     </widget>
    </item>
