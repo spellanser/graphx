@@ -16,13 +16,16 @@ SOURCES += main.cpp\
     plot.cpp \
     help.cpp \
     functionhelp.cpp \
-    about.cpp
+    about.cpp\
+qwtchartzoom.cpp
 
 HEADERS  += mainmenu.h \
     plot.h \
     help.h \
     functionhelp.h \
-    about.h
+    about.h \
+qwtchartzoom.h
+
 
 FORMS    += mainmenu.ui \
     plot.ui \

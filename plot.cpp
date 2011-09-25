@@ -8,6 +8,8 @@
 #include "postfix_result_and_stroka_postfix.cpp"
 
 
+#include "qwtchartzoom.h"
+
 // ==================== Конструктор =============================
 
 plot::plot(QWidget *parent) : QWidget(parent),
@@ -158,8 +160,10 @@ if (key2!=true)
 
     // зуммирование
 
-    zoom = new QwtPlotZoomer(ui->qwtPlot->canvas());
-    zoom->setRubberBandPen(QPen(Qt::blue));
+   // zoom = new QwtPlotZoomer(ui->qwtPlot->canvas());
+    zoom = new QwtChartZoom(ui->qwtPlot);
+    //zoom->setRubberBandPen(QPen(Qt::blue));
+    zoom->setRubberBandColor(Qt::blue);
 
 
         //сигналы переходов форм
@@ -347,8 +351,11 @@ ui->lineEdit->setFocus();
 
     // зуммирование
 
-    zoom = new QwtPlotZoomer(ui->qwtPlot->canvas());
-   zoom->setRubberBandPen(QPen(Qt::blue));
+   // zoom = new QwtPlotZoomer(ui->qwtPlot->canvas());
+   zoom = new QwtChartZoom(ui->qwtPlot);
+  //  zoom->setRubberBandPen(QPen(Qt::blue));
+   zoom->setRubberBandColor(Qt::blue);
+
 }
 
 // ========= Деструктор ===========
