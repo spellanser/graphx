@@ -7,7 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>937</width>
+<<<<<<< HEAD
     <height>694</height>
+=======
+    <height>689</height>
+>>>>>>> 7c07437c1e85cfd30a76af7f03cbd92b4352ac94
    </rect>
   </property>
   <property name="windowTitle">
@@ -156,7 +160,11 @@ p, li { white-space: pre-wrap; }
         <rect>
          <x>0</x>
          <y>0</y>
+<<<<<<< HEAD
          <width>911</width>
+=======
+         <width>921</width>
+>>>>>>> 7c07437c1e85cfd30a76af7f03cbd92b4352ac94
          <height>581</height>
         </rect>
        </property>
@@ -174,7 +182,11 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; color:#aa0000;&quot;&gt;y = log&lt;/span&gt;&lt;span style=&quot; font-size:14pt; color:#aa0000; vertical-align:sub;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-size:14pt; color:#aa0000;&quot;&gt;(x)&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;Она определена при a&amp;gt;0, a &lt;/span&gt;&lt;span style=&quot; font-size:14pt; color:#000000;&quot;&gt;≠&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt; 1 ; x&amp;gt;0  . Область значений: E(y) = (- &lt;/span&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;∞ &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;∞&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:18pt; color:#000000;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;) . &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;Функция является строго возрастающей при &lt;/span&gt;&lt;span style=&quot; font-family:'serif'; font-size:medium; font-style:italic; color:#000000;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-family:'serif'; font-size:medium; color:#000000;&quot;&gt;&amp;gt; 1 &lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;и строго убывающей при &lt;/span&gt;&lt;span style=&quot; font-family:'serif'; font-size:medium; color:#000000;&quot;&gt;0 &amp;lt;&lt;/span&gt;&lt;span style=&quot; font-family:'serif'; font-size:medium; font-style:italic; color:#000000;&quot;&gt;a &lt;/span&gt;&lt;span style=&quot; font-family:'serif'; font-size:medium; color:#000000;&quot;&gt;&amp;lt; 1&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;. График любой логарифмической функции проходит через точку &lt;/span&gt;&lt;span style=&quot; font-family:'serif'; font-size:medium; color:#000000;&quot;&gt;(1;0)&lt;/span&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:medium; color:#000000;&quot;&gt;. Функция и неограниченно всюду в своей области определения.&lt;/span&gt;&lt;/p&gt;
+<<<<<<< HEAD
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/Res/res/log.png&quot; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+=======
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+>>>>>>> 7c07437c1e85cfd30a76af7f03cbd92b4352ac94
        </property>
       </widget>
      </widget>

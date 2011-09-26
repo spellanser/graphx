@@ -17,6 +17,9 @@
         <file>Res/res/Снимок-7.png</file>
         <file>Res/res/Снимок-9 (копия).png</file>
         <file>Res/res/Снимок-8 (копия).png</file>
+<<<<<<< HEAD
         <file>Res/res/log.png</file>
+=======
+>>>>>>> 7c07437c1e85cfd30a76af7f03cbd92b4352ac94
     </qresource>
 </RCC>

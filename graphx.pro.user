@@ -27,7 +27,10 @@
       <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">QtProjectManager.QMakeBuildStep</value>
       <valuelist key="QtProjectManager.QMakeBuildStep.QMakeArguments" type="QVariantList">
        <value type="QString">QMLJSDEBUGGER_PATH=/usr/share/qtcreator/qml/qmljsdebugger</value>
+<<<<<<< HEAD
        <value type="QString">QMLJSDEBUGGER_PATH=/usr/share/qtcreator/qml/qmljsdebugger</value>
+=======
+>>>>>>> 7c07437c1e85cfd30a76af7f03cbd92b4352ac94
       </valuelist>
       <value key="QtProjectManager.QMakeBuildStep.QMakeForced" type="bool">false</value>
      </valuemap>
@@ -80,7 +83,10 @@
       <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">QtProjectManager.QMakeBuildStep</value>
       <valuelist key="QtProjectManager.QMakeBuildStep.QMakeArguments" type="QVariantList">
        <value type="QString">QMLJSDEBUGGER_PATH=/usr/share/qtcreator/qml/qmljsdebugger</value>
+<<<<<<< HEAD
        <value type="QString">QMLJSDEBUGGER_PATH=/usr/share/qtcreator/qml/qmljsdebugger</value>
+=======
+>>>>>>> 7c07437c1e85cfd30a76af7f03cbd92b4352ac94
       </valuelist>
       <value key="QtProjectManager.QMakeBuildStep.QMakeForced" type="bool">false</value>
      </valuemap>
