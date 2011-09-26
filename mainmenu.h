@@ -25,10 +25,12 @@ private:
 
 public slots:
  // слоты  переходов форм
-void next();
+
 void next2();
-void his();
+
 void hel();
+void abo();
+
 
 
 };

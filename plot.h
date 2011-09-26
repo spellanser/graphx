@@ -8,7 +8,7 @@
 #include <qwt_plot_curve.h>
 #include <qwt_symbol.h>
 #include <qwt_plot_zoomer.h>
-
+#include <qwtchartzoom.h>
 
 namespace Ui {
     class plot;
@@ -30,8 +30,9 @@ protected:
   QwtPlotGrid *grid;
   QwtPlotCurve *curv1,*curv2;
     QwtSymbol *symbol1;
-    QwtPlotZoomer *zoom;
+   // QwtPlotZoomer *zoom;
 
+QwtChartZoom *zoom;
 
 private:
     Ui::plot *ui;
@@ -39,12 +40,25 @@ private:
 
 public slots:
  // слоты  переходов форм
-    void prevv();
-    void vvod();
-
+    void erase();
+    void instruct();
+    void plot1();
+void main();
+void eraseall();
 
 
 
 };
 
 #endif // PLOT_H
+
+
+
+
+
+
+
+
+
+
+

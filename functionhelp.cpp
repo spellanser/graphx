@@ -1,7 +1,7 @@
 #include "functionhelp.h"
 #include "ui_functionhelp.h"
 
-#include <form2.h>
+#include <plot.h>
 
 functionhelp::functionhelp(QWidget *parent) :  QDialog(parent),
 
@@ -19,7 +19,7 @@ functionhelp::~functionhelp()
 
 void functionhelp::back()
 {
-    Form2 *x = new Form2();
-    x->show();
+
     close();
+
 }
