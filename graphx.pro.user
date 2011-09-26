@@ -60,11 +60,11 @@
     <value key="ProjectExplorer.BuildConfiguration.BuildStepListCount" type="int">2</value>
     <value key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment" type="bool">false</value>
     <valuelist key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges" type="QVariantList"/>
-    <value key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName" type="QString">Отладка</value>
+    <value key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName" type="QString">Релиз</value>
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString"></value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4BuildConfiguration</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">2</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/sarkis/coursework/graphx/graphx-build-desktop</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">0</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/sarkis/coursework/graphx/Sborka</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId" type="int">2</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.ToolChain" type="int">0</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild" type="bool">true</value>
@@ -110,10 +110,10 @@
     <value key="ProjectExplorer.BuildConfiguration.BuildStepListCount" type="int">2</value>
     <value key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment" type="bool">false</value>
     <valuelist key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges" type="QVariantList"/>
-    <value key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName" type="QString">Релиз</value>
+    <value key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName" type="QString">Отладка</value>
     <value key="ProjectExplorer.ProjectConfiguration.DisplayName" type="QString"></value>
     <value key="ProjectExplorer.ProjectConfiguration.Id" type="QString">Qt4ProjectManager.Qt4BuildConfiguration</value>
-    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">0</value>
+    <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildConfiguration" type="int">2</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.BuildDirectory" type="QString">/home/sarkis/coursework/graphx/graphx-build-desktop</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.QtVersionId" type="int">2</value>
     <value key="Qt4ProjectManager.Qt4BuildConfiguration.ToolChain" type="int">0</value>
@@ -158,7 +158,7 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.EnvironmentId</variable>
-  <value type="QString">{a38dbc8b-d806-4988-8eca-cacc7217fe57}</value>
+  <value type="QString">{21fbda52-96fd-4a15-b25d-f0c5ea831065}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.Updater.FileVersion</variable>

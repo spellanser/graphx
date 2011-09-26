@@ -5,7 +5,7 @@
 #include <plot.h>
 #include <history.h>
 #include <help.h>
-
+#include <about.h>
 
 MainMenu::MainMenu(QWidget *parent) : QDialog(parent),
     ui(new Ui::MainMenu)
@@ -13,10 +13,12 @@ MainMenu::MainMenu(QWidget *parent) : QDialog(parent),
     ui->setupUi(this);
 
     //сигналы переходов форм
-    connect(ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(next()));
+
     connect (ui->pushButton_2,SIGNAL(clicked(bool)),this,SLOT(next2()));
-    connect (ui->pushButton_3,SIGNAL(clicked(bool)),this,SLOT(his()));
+
     connect (ui->pushButton_4,SIGNAL(clicked(bool)),this,SLOT(hel()));
+
+    connect (ui->pushButton_6,SIGNAL(clicked(bool)),this,SLOT(abo()));
 
 }
 
@@ -24,13 +26,7 @@ MainMenu::~MainMenu()
 {
     delete ui;
 }
-void MainMenu::next()
-{
-    Form2 *x= new Form2();
-    x->show();
-close();
 
-}
 void MainMenu::next2()
 {
     plot *y = new plot();
@@ -39,13 +35,14 @@ void MainMenu::next2()
 
 
 }
-void MainMenu::his()
+void MainMenu::abo()
 {
-    history *x = new history();
-    x->show();
-    close();
+    about *x = new about();
+x->show();
+close();
 
 }
+
 
 void MainMenu::hel()
 {
