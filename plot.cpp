@@ -95,8 +95,11 @@ plot::plot(QWidget *parent) : QWidget(parent),
                 ("Check the correctness of the function! (See the instructions for writing) "),
                 QMessageBox::Ok);
  msgBox.exec();
-  ui->lineEdit->clear();
+//  ui->lineEdit->clear();
+  ui->lineEdit->selectAll();
  ui->lineEdit->setFocus();
+
+
 
 }
     bool key2 = false;
@@ -108,8 +111,11 @@ plot::plot(QWidget *parent) : QWidget(parent),
             ("Read instruction!"),
             QMessageBox::Ok);
     msgBox.exec();
-    ui->lineEdit->clear();
+  //  ui->lineEdit->clear();
+    ui->lineEdit->selectAll();
     ui->lineEdit->setFocus();
+
+
 
     }
 
@@ -181,6 +187,7 @@ if (key2!=true)
     //zoom->setRubberBandPen(QPen(Qt::blue));
     zoom->setRubberBandColor(Qt::blue);
 
+    ui->qwtPlot->replot();
 
         //сигналы переходов форм
         connect (ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(plot1()));
@@ -289,8 +296,10 @@ bool key1 = false;
                 ("Check the correctness of the function! (See the instructions for writing) "),
                 QMessageBox::Ok);
  msgBox.exec();
- ui->lineEdit->clear();
+// ui->lineEdit->clear();
+ui->lineEdit->selectAll();
  ui->lineEdit->setFocus();
+
 
 }
     bool key2 = false;
@@ -302,8 +311,11 @@ bool key1 = false;
             ("Read instruction!"),
             QMessageBox::Ok);
     msgBox.exec();
-    ui->lineEdit->clear();
+ //   ui->lineEdit->clear();
+    ui->lineEdit->selectAll();
     ui->lineEdit->setFocus();
+
+
 
     }
 
@@ -383,6 +395,8 @@ ui->lineEdit->setFocus();
    zoom = new QwtChartZoom(ui->qwtPlot);
   //  zoom->setRubberBandPen(QPen(Qt::blue));
    zoom->setRubberBandColor(Qt::blue);
+
+   ui->qwtPlot->replot();
 
 }
 

@@ -1,22 +1,20 @@
 <RCC>
     <qresource prefix="/">
-        <file>Res/res/7c1c9491ba7c6e8d6d2cfa82e39b22ca82.png</file>
-        <file>Res/res/inward_black_info.png</file>
-        <file>Res/res/-history.png</file>
-        <file>Res/res/12770073.png</file>
+        <file>Res/res/sin2.png</file>
+        <file>Res/res/sin.png</file>
+        <file>Res/res/pokaz2.png</file>
+        <file>Res/res/pokaz.png</file>
         <file>Res/res/Mgtu_emblema.gif</file>
         <file>Res/res/logo-steam.jpg</file>
-        <file>Res/res/Eclipse.jpg</file>
-        <file>Res/res/Снимок-2.png</file>
-        <file>Res/res/Снимок-1.png</file>
-        <file>Res/res/Linear_functions2.PNG</file>
-        <file>Res/res/Снимок-6.png</file>
-        <file>Res/res/Снимок-5.png</file>
-        <file>Res/res/Снимок-4.png</file>
-        <file>Res/res/Снимок-3.png</file>
-        <file>Res/res/Снимок-7.png</file>
-        <file>Res/res/Снимок-9 (копия).png</file>
-        <file>Res/res/Снимок-8 (копия).png</file>
         <file>Res/res/log.png</file>
+        <file>Res/res/Linear_functions2.PNG</file>
+        <file>Res/res/kvadr3.png</file>
+        <file>Res/res/kvadr2.png</file>
+        <file>Res/res/kvadr.png</file>
+        <file>Res/res/inward_black_info.png</file>
+        <file>Res/res/-history.png</file>
+        <file>Res/res/Eclipse.png</file>
+        <file>Res/res/12770073.png</file>
+        <file>Res/res/7c1c9491ba7c6e8d6d2cfa82e39b22ca82.png</file>
     </qresource>
 </RCC>

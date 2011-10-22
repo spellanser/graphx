@@ -29,7 +29,6 @@ qwtchartzoom.h
 
 FORMS    += mainmenu.ui \
     plot.ui \
-    history.ui \
     help.ui \
     functionhelp.ui \
     about.ui
