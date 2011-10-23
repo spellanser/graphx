@@ -4,7 +4,7 @@
 #include <mainmenu.h>
 
 
-help::help(QWidget *parent) : QDialog(parent),
+help::help(QWidget *parent) : QDialog (parent),
     ui(new Ui::help)
 
 {
@@ -12,6 +12,7 @@ help::help(QWidget *parent) : QDialog(parent),
     connect (ui->pushButton,SIGNAL(clicked(bool)),this,SLOT(back()));
 
 }
+
 
 help::~help()
 {
