@@ -30,7 +30,8 @@ MainMenu::~MainMenu()
 void MainMenu::next2()
 {
     plot *y = new plot();
-    y->show();
+    y->setWindowState(y->windowState() ^ Qt::WindowMaximized);
+      y->show();
     close();
 
 
@@ -47,6 +48,8 @@ close();
 void MainMenu::hel()
 {
     help *x = new help();
+    x->setWindowState(x->windowState() ^ Qt::WindowMaximized);
+
     x->show();
     close();
 

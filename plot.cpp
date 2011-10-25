@@ -434,6 +434,8 @@ void plot::erase()
 void plot::eraseall()
 {
     plot *x1 = new plot;
+    x1->setWindowState(x1->windowState() ^ Qt::WindowMaximized);
+
     x1->show();
     close();
 
