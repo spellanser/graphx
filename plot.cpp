@@ -35,6 +35,8 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
     int str1,str2;
     int str11, str22;
+    QString st;
+
 
     str = ui->lineEdit->text();
     str1 = ui->lineEdit_3->text().toInt();
@@ -42,6 +44,12 @@ plot::plot(QWidget *parent) : QWidget(parent),
     str11 = ui->lineEdit_3->text().toDouble();
     str22 = ui->lineEdit_2->text().toDouble();
 
+    st = ui->comboBox->currentText();
+   /* QMessageBox msgBox(QMessageBox::Information,
+        ("st!"),
+        (st),
+        QMessageBox::Ok);
+msgBox.exec();*/
     char* value = new char[100];
     QByteArray ar = str.toAscii();
     char *sometext = ar.data();
@@ -73,7 +81,11 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
     curv1 = new QwtPlotCurve(QString(str));
     curv1->setRenderHint(QwtPlotItem::RenderAntialiased);
-    curv1->setPen(QPen(Qt::red));
+    //curv1->setPen(QPen(Qt::red));
+    curv1->setPen(QPen(QString(st)));
+    ui->qwtPlot->repaint();
+    ui->qwtPlot->replot();
+
 
     // обозначаем точки кривой
 
@@ -103,7 +115,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
 }
     bool key2 = false;
-    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*')
+    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' || str[0]=='x')
     {
         key2 = true;
         QMessageBox msgBox(QMessageBox::Information,
@@ -122,6 +134,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
 
 if (key2!=true)
 {
+
 
 
     //кол-во точек кривой
@@ -145,8 +158,8 @@ if (key2!=true)
             rez = polka(vixod(input1),rez11,0);
             QString rez1;
             rez1.setNum(rez);
-            if (rez1 != "nan" )
-                if (rez1 != "inf")
+           if (rez1 != "nan" )
+               if (rez1 != "inf")
                      if (rez1 != "-inf")
             {
                 X1[i] = k;
@@ -218,6 +231,9 @@ void plot::plot1()
 
 
     QString str;
+  QString st;
+
+  st = ui->comboBox->currentText();
 
     int str1,str2;
     int str11, str22;
@@ -232,7 +248,14 @@ void plot::plot1()
 
     curv1 = new QwtPlotCurve(QString(str));
     curv1->setRenderHint(QwtPlotItem::RenderAntialiased);
-    curv1->setPen(QPen(Qt::red));
+//    curv1->setPen(QPen(Qt::red));
+    curv1->setPen(QPen(QString(st)));
+
+    ui->qwtPlot->repaint();
+    ui->qwtPlot->replot();
+
+   // ui->qwtPlot->repaint();
+   // ui->qwtPlot->replot();
     // обозначаем точки кривой
 
 
@@ -303,7 +326,7 @@ ui->lineEdit->selectAll();
 
 }
     bool key2 = false;
-    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*')
+    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' || str[0]=='x')
     {
         key2 = true;
         QMessageBox msgBox(QMessageBox::Information,
@@ -322,6 +345,7 @@ ui->lineEdit->selectAll();
 
 if (key2!=true)
 {
+
 
 
     //кол-во точек кривой

@@ -45,6 +45,7 @@ public slots:
     void plot1();
 void main();
 void eraseall();
+//void color();
 
 
 

@@ -75,18 +75,137 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </item>
-   <item row="0" column="4">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+   <item row="1" column="0" colspan="10">
+    <widget class="QwtPlot" name="qwtPlot"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>true</underline>
+      </font>
      </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>40</width>
-       <height>20</height>
-      </size>
+     <property name="text">
+      <string>Инструкция по вводу</string>
      </property>
-    </spacer>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Удалить последнюю фуннкцию</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="focusPolicy">
+      <enum>Qt::TabFocus</enum>
+     </property>
+     <property name="text">
+      <string>Очистить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3" colspan="3">
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="text">
+      <string>Возврат в меню</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Выберите цвет:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>red</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>orange</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>coral</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>yellow</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>black</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>grey</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>cyan</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>blue</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>darkblue</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>green</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>lime</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>darkgreen</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>teal</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>purple</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>magenta</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>indigo</string>
+      </property>
+     </item>
+    </widget>
    </item>
    <item row="0" column="5">
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -137,46 +256,31 @@ p, li { white-space: pre-wrap; }
      </item>
     </layout>
    </item>
-   <item row="1" column="0" colspan="6">
-    <widget class="QwtPlot" name="qwtPlot"/>
+   <item row="0" column="4">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
    </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-       <underline>true</underline>
-      </font>
+   <item row="0" column="6">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
      </property>
-     <property name="text">
-      <string>Инструкция по вводу</string>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
      </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>Удалить последнюю фуннкцию</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="2">
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="focusPolicy">
-      <enum>Qt::TabFocus</enum>
-     </property>
-     <property name="text">
-      <string>Очистить</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="3" colspan="2">
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="text">
-      <string>Возврат в меню</string>
-     </property>
-    </widget>
+    </spacer>
    </item>
   </layout>
  </widget>
