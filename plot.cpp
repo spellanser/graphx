@@ -61,14 +61,6 @@ msgBox.exec();*/
     input1 = len(input1,value);
     output1=vixod(input1);
 
-   /*
-    // легенда
-    leg = new QwtLegend();
-        // запрещаем ее редактировать
-        leg->setItemMode(QwtLegend::ReadOnlyItem);
-        //  добавляем легенду в верхнюю часть графика
-        ui->qwtPlot->insertLegend(leg,QwtPlot::TopLegend);
-*/
 
     // устанавливаем границы осей
     ui->qwtPlot->setAxisTitle(QwtPlot::xBottom,QString::fromUtf8("Ось Х"));
@@ -230,9 +222,7 @@ void plot::plot1()
     // задаем  график
 
 
-
-
-    QString str;
+  QString str;
   QString st;
 
   st = ui->comboBox->currentText();
@@ -241,6 +231,9 @@ void plot::plot1()
     int str11, str22;
 
     str = ui->lineEdit->text();
+
+   // исправление неправильного ввода
+
     str[str.length()+1]='+';
     str[str.length()+2]='0';
 
@@ -258,8 +251,6 @@ void plot::plot1()
     ui->qwtPlot->repaint();
     ui->qwtPlot->replot();
 
-   // ui->qwtPlot->repaint();
-   // ui->qwtPlot->replot();
     // обозначаем точки кривой
 
 
@@ -289,7 +280,6 @@ void plot::plot1()
     ui->qwtPlot->setAxisTitle(QwtPlot::yLeft,QString::fromUtf8("Ось Y"));
     ui->qwtPlot->setAxisScale(QwtPlot::yLeft,(str1),(str2));
 
- //ui->qwtPlot->replot();
 
 // передача введенной функции в польскую запись для разбора
     char* value = new char[100];
@@ -315,7 +305,7 @@ bool key1 = false;
                 ("Check the correctness of the function! (See the instructions for writing) "),
                 QMessageBox::Ok);
  msgBox.exec();
-// ui->lineEdit->clear();
+
 ui->lineEdit->selectAll();
  ui->lineEdit->setFocus();
 
@@ -467,7 +457,7 @@ void plot::instruct()
 {
     functionhelp *x = new functionhelp;
     x->show();
-   //hide();
+
 
 }
 
