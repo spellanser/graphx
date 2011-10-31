@@ -6,6 +6,10 @@
 #include <QtGui>
 #include "text_analiz.cpp"
 #include "postfix_result_and_stroka_postfix.cpp"
+#include <QSet>
+
+
+using namespace std;
 
 
 #include "qwtchartzoom.h"
@@ -17,7 +21,14 @@ plot::plot(QWidget *parent) : QWidget(parent),
 {
     ui->setupUi(this);
 
+    QSet <int> mn;
 
+
+    for (int i = 0; i < 10; i++)
+    {
+        mn.insert(i);
+
+    }
     //заголовок
     ui->qwtPlot->setTitle(QString::fromUtf8(" График введенной функции "));
 
@@ -114,22 +125,43 @@ msgBox.exec();*/
 
 
 }
+
     bool key2 = false;
-    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' || str[0]=='x')
+    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' )
     {
         key2 = true;
         QMessageBox msgBox(QMessageBox::Information,
             ("Error!"),
-            ("Read instruction!"),
+            ("Read instruction! You must input y = 0+x or y = (-1)*x"),
             QMessageBox::Ok);
     msgBox.exec();
-  //  ui->lineEdit->clear();
+ //   ui->lineEdit->clear();
     ui->lineEdit->selectAll();
     ui->lineEdit->setFocus();
 
 
 
     }
+
+
+ int kk;
+kk = str.size();
+
+if ( str[0]=='x' && kk==1 )
+{
+key2 = true;
+
+QMessageBox msgBox(QMessageBox::Information,
+    ("Error!"),
+    ("Read instruction! You must write y = 1*x or y = x+0"),
+    QMessageBox::Ok);
+msgBox.exec();
+
+ui->lineEdit->selectAll();
+ui->lineEdit->setFocus();
+
+
+}
 
 
 if (key2!=true)
@@ -230,6 +262,8 @@ void plot::plot1()
     // задаем  график
 
 
+
+
     QString str;
   QString st;
 
@@ -325,13 +359,18 @@ ui->lineEdit->selectAll();
 
 
 }
+
+int kk;
+kk = str.size();
+
+
     bool key2 = false;
-    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' || str[0]=='x')
+    if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' )
     {
         key2 = true;
         QMessageBox msgBox(QMessageBox::Information,
             ("Error!"),
-            ("Read instruction!"),
+            ("Read instruction! You must input y = 0+x or y = (-1)*x"),
             QMessageBox::Ok);
     msgBox.exec();
  //   ui->lineEdit->clear();
@@ -341,9 +380,47 @@ ui->lineEdit->selectAll();
 
 
     }
+/*
+   if ( str[0]=='x' && kk==1 )
+    {
+    key2 = true;
+
+    QMessageBox msgBox(QMessageBox::Information,
+        ("Error!"),
+        ("Read instruction! You must input y = 1*x or y = x+0"),
+        QMessageBox::Ok);
+    msgBox.exec();
+
+    ui->lineEdit->selectAll();
+    ui->lineEdit->setFocus();
 
 
-if (key2!=true)
+    }
+*/
+   bool key3 = false;
+ #define is_operator(c) (c == '+' || c == '-' || c == '/' || c == '*' || c == '!' || c == '^' || c == '%' || c == '=' )
+ for (int i = 0; i< strlen( input1);i++)
+ {
+     if (is_operator( input1[i]))
+     {
+         key3 = true;
+         break;
+     }
+ }
+
+ if ( key3 == false )
+ {
+key3=true;
+ QMessageBox msgBox(QMessageBox::Information,
+     ("Error!"),
+     ("Read instruction!"),
+     QMessageBox::Ok);
+ msgBox.exec();
+
+ }
+
+ key3=false;
+if (key2!=true && key3!=true)
 {
 
 
