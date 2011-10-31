@@ -6,10 +6,6 @@
 #include <QtGui>
 #include "text_analiz.cpp"
 #include "postfix_result_and_stroka_postfix.cpp"
-#include <QSet>
-
-
-using namespace std;
 
 
 #include "qwtchartzoom.h"
@@ -21,14 +17,7 @@ plot::plot(QWidget *parent) : QWidget(parent),
 {
     ui->setupUi(this);
 
-    QSet <int> mn;
 
-
-    for (int i = 0; i < 10; i++)
-    {
-        mn.insert(i);
-
-    }
     //заголовок
     ui->qwtPlot->setTitle(QString::fromUtf8(" График введенной функции "));
 
@@ -143,27 +132,6 @@ msgBox.exec();*/
 
     }
 
-
- int kk;
-kk = str.size();
-
-if ( str[0]=='x' && kk==1 )
-{
-key2 = true;
-
-QMessageBox msgBox(QMessageBox::Information,
-    ("Error!"),
-    ("Read instruction! You must write y = 1*x or y = x+0"),
-    QMessageBox::Ok);
-msgBox.exec();
-
-ui->lineEdit->selectAll();
-ui->lineEdit->setFocus();
-
-
-}
-
-
 if (key2!=true)
 {
 
@@ -273,6 +241,8 @@ void plot::plot1()
     int str11, str22;
 
     str = ui->lineEdit->text();
+    str[str.length()+1]='+';
+    str[str.length()+2]='0';
 
     str1 = ui->lineEdit_3->text().toInt();
     str2 = ui->lineEdit_2->text().toInt();
@@ -332,15 +302,7 @@ void plot::plot1()
     input1 = proobraz(input1);
     input1 = len(input1,value);
     output1=vixod(input1);
-/*
-    // легенда
 
-    leg = new QwtLegend();
-        // запрещаем ее редактировать
-        leg->setItemMode(QwtLegend::ReadOnlyItem);
-        //  добавляем легенду в верхнюю часть графика
-        ui->qwtPlot->insertLegend(leg,QwtPlot::TopLegend);
-*/
     // обработка ошибок
 bool key1 = false;
 
@@ -360,9 +322,6 @@ ui->lineEdit->selectAll();
 
 }
 
-int kk;
-kk = str.size();
-
 
     bool key2 = false;
     if (str[0]=='-' || str[0]=='+' || str[0]== '/' || str[0] == '*' )
@@ -380,47 +339,9 @@ kk = str.size();
 
 
     }
-/*
-   if ( str[0]=='x' && kk==1 )
-    {
-    key2 = true;
-
-    QMessageBox msgBox(QMessageBox::Information,
-        ("Error!"),
-        ("Read instruction! You must input y = 1*x or y = x+0"),
-        QMessageBox::Ok);
-    msgBox.exec();
-
-    ui->lineEdit->selectAll();
-    ui->lineEdit->setFocus();
 
 
-    }
-*/
-   bool key3 = false;
- #define is_operator(c) (c == '+' || c == '-' || c == '/' || c == '*' || c == '!' || c == '^' || c == '%' || c == '=' )
- for (int i = 0; i< strlen( input1);i++)
- {
-     if (is_operator( input1[i]))
-     {
-         key3 = true;
-         break;
-     }
- }
-
- if ( key3 == false )
- {
-key3=true;
- QMessageBox msgBox(QMessageBox::Information,
-     ("Error!"),
-     ("Read instruction!"),
-     QMessageBox::Ok);
- msgBox.exec();
-
- }
-
- key3=false;
-if (key2!=true && key3!=true)
+if (key2!=true )
 {
 
 
