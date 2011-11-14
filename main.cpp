@@ -1,5 +1,6 @@
 #include <QtGui/QApplication>
 #include "mainmenu.h"
+#include <QtCore>
 
 int main(int argc, char *argv[])
 {
