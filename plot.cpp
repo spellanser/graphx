@@ -30,7 +30,6 @@ plot::plot(QWidget *parent) : QWidget(parent),
     grid->setMinPen(QPen(Qt::gray,0,Qt::DotLine));
     grid->attach(ui->qwtPlot);
 
-
     QString str;
 
     int str1,str2;
@@ -82,7 +81,7 @@ msgBox.exec();*/
     // обозначаем точки кривой
 
     symbol1 = new QwtSymbol();
-    //symbol1->setStyle(QwtSymbol::Ellipse);
+
     symbol1->setPen(QColor(Qt::black));
     symbol1->setSize(4);
     curv1->setSymbol(symbol1);
@@ -99,7 +98,7 @@ msgBox.exec();*/
                 ("Check the correctness of the function! (See the instructions for writing) "),
                 QMessageBox::Ok);
  msgBox.exec();
-//  ui->lineEdit->clear();
+
   ui->lineEdit->selectAll();
  ui->lineEdit->setFocus();
 
@@ -116,7 +115,6 @@ msgBox.exec();*/
             ("Read instruction! You must input y = 0+x or y = (-1)*x"),
             QMessageBox::Ok);
     msgBox.exec();
- //   ui->lineEdit->clear();
     ui->lineEdit->selectAll();
     ui->lineEdit->setFocus();
 
@@ -187,9 +185,7 @@ if (key2!=true)
 
     // зуммирование
 
-   // zoom = new QwtPlotZoomer(ui->qwtPlot->canvas());
     zoom = new QwtChartZoom(ui->qwtPlot);
-    //zoom->setRubberBandPen(QPen(Qt::blue));
     zoom->setRubberBandColor(Qt::blue);
 
     ui->qwtPlot->replot();
@@ -219,6 +215,7 @@ void plot::plot1()
 {
     // Заголовок
     ui->qwtPlot->setTitle(QString::fromUtf8(" График введенной функции "));
+
     // задаем  график
 
 
@@ -245,7 +242,6 @@ void plot::plot1()
 
     curv1 = new QwtPlotCurve(QString(str));
     curv1->setRenderHint(QwtPlotItem::RenderAntialiased);
-//    curv1->setPen(QPen(Qt::red));
     curv1->setPen(QPen(QString(st)));
 
     ui->qwtPlot->repaint();
@@ -255,7 +251,6 @@ void plot::plot1()
 
 
     symbol1 = new QwtSymbol();
-    //symbol1->setStyle(QwtSymbol::Ellipse);
     symbol1->setPen(QColor(Qt::black));
     symbol1->setSize(4);
     curv1->setSymbol(symbol1);
@@ -322,8 +317,7 @@ ui->lineEdit->selectAll();
             ("Read instruction! You must input y = 0+x or y = (-1)*x"),
             QMessageBox::Ok);
     msgBox.exec();
- //   ui->lineEdit->clear();
-    ui->lineEdit->selectAll();
+   ui->lineEdit->selectAll();
     ui->lineEdit->setFocus();
 
 
@@ -403,9 +397,7 @@ ui->lineEdit->setFocus();
 
     // зуммирование
 
-   // zoom = new QwtPlotZoomer(ui->qwtPlot->canvas());
    zoom = new QwtChartZoom(ui->qwtPlot);
-  //  zoom->setRubberBandPen(QPen(Qt::blue));
    zoom->setRubberBandColor(Qt::blue);
 
    ui->qwtPlot->replot();

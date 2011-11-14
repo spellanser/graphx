@@ -297,6 +297,8 @@ void QwtChartZoom::execDrag(QMouseEvent *mEvent)
     qwtp->setAxisScale(QwtPlot::yLeft,scb_yb+dy,scb_yt+dy);
     // перерисовываем график
     qwtp->replot();
+    bool kkk = true;
+
 }
 
 // Выключение перемещения графика
