@@ -6,6 +6,9 @@
 
 QT       += core gui
 
+TRANSLATIONS = rus_lang.ts \
+eng_lang.ts
+CODECFORTR  = utf8
 TARGET = graphx
 TEMPLATE = app
 INCLUDEPATH += /home/sarkis/qwt-6.0.1/src
@@ -35,3 +38,4 @@ FORMS    += mainmenu.ui \
 
 RESOURCES += \
     res.qrc
+
